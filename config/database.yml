@@ -2,6 +2,8 @@ default: &default
   adapter: postgresql
   pool: 5
   database: books_hackathon
+  username: webapp
+  password: webapp
 
 development:
   <<: *default

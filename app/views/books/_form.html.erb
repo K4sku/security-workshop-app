@@ -20,6 +20,10 @@
     <%= form.label :description %>
     <%= form.text_area :description, id: :book_description, class: 'form-control' %>
   </div>
+  <div class="input-group">
+    <%= form.label :category %>
+    <%= form.collection_select(:category_id, Category.all, :id, :category) %>
+  </div>
 
   <div class="input-group">
     <br>

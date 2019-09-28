@@ -15,6 +15,7 @@ class BooksController < ApplicationController
   # GET /books/1
   # GET /books/1.json
   def show
+    @book.category = Category.find(@book.category_id)
   end
 
   def details
@@ -84,6 +85,6 @@ class BooksController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def book_params
-    params.require(:book).permit(:name, :description)
+    params.require(:book).permit(:name, :description, :category_id)
   end
 end

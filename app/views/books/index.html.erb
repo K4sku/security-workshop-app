@@ -18,6 +18,7 @@
     <tr>
       <th>Name</th>
       <th>Description</th>
+      <th class="text-right">Category</th>
       <th></th>
     </tr>
   </thead>
@@ -27,6 +28,7 @@
       <tr>
         <td><%= book.name %></td>
         <td><%= h truncate(book.description, length: 80) %></td>
+        <td class="text-right"><%= book.category.category %></td>
         <td class="text-right">
           <%= link_to 'Show', book, class: 'btn btn-sm btn-default' %>
           <% if current_user && current_user == book.creator %>

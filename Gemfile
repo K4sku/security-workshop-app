@@ -12,6 +12,7 @@ gem 'rails', '~> 5.1.0'
 # gem 'sqlite3'
 
 gem 'pg'
+gem 'rake', '12.3.3'
 
 gem 'devise'
 gem 'jquery-rails'

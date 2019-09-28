@@ -10,6 +10,11 @@
   <%= raw @book.description %>
 </p>
 
+<p>
+  <strong>Category:</strong>
+  <%= raw @book.category.category %>
+</p>
+
 <%= link_to 'Back', books_path, class: 'btn btn-default' %>
 <% if current_user && current_user == @book.creator %>
   <%= link_to 'Edit', edit_book_path(@book), class: 'btn btn-default' %>
