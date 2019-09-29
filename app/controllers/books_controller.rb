@@ -15,7 +15,6 @@ class BooksController < ApplicationController
   # GET /books/1
   # GET /books/1.json
   def show
-    @book.category = Category.find(@book.category_id)
   end
 
   def details
@@ -81,6 +80,7 @@ class BooksController < ApplicationController
   # Use callbacks to share common setup or constraints between actions.
   def set_book
     @book = Book.find(params[:id])
+    @book.category = Category.find(@book.category_id)
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.

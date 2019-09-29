@@ -26,7 +26,7 @@
         <td title="<%= book.description %>">
           <%= h truncate(book.description, length: 80) %>
         </td>
-        <td class="text-right"><%= book.category.category %></td>
+        <td class="text-right"><%= book.category.category_name %></td>
         <td>
           <% if user_signed_in? %>
             <%= link_to 'Add to my books', add_to_my_books_book_path(book, format: :js), method: :post, remote: true, class: 'btn btn-sm btn-default' %>

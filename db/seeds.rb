@@ -73,9 +73,9 @@ books = [
 ]
 
 categories = [
-    { category: 'horror' },
-    { category: 'fantasy' },
-    { category: 'thriller' }
+    { category_name: 'horror' },
+    { category_name: 'fantasy' },
+    { category_name: 'thriller' }
 ]
 
 categories.each do |category|
@@ -84,7 +84,7 @@ end
 
 books.each do |book_params|
   book = Book.new(book_params)
-  book.category_id = rand(1..3)
+  book.category_id = Category.all.sample.id
   book.save
   book.users << jane
 end

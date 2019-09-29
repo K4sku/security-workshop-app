@@ -2,17 +2,17 @@
 
 <p>
   <strong>Name:</strong>
-  <%= raw @book.name %>
+  <%= @book.name %>
 </p>
 
 <p>
   <strong>Description:</strong>
-  <%= raw @book.description %>
+  <%= @book.description %>
 </p>
 
 <p>
   <strong>Category:</strong>
-  <%= raw @book.category.category %>
+  <%= @book.category.category_name %>
 </p>
 
 <%= link_to 'Back', books_path, class: 'btn btn-default' %>

@@ -22,7 +22,7 @@
   </div>
   <div class="input-group">
     <%= form.label :category %>
-    <%= form.collection_select(:category_id, Category.all, :id, :category) %>
+    <%= form.collection_select(:category_id, Category.all, :id, :category_name) %>
   </div>
 
   <div class="input-group">
